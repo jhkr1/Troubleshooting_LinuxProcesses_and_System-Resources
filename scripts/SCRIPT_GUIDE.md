@@ -863,7 +863,7 @@ MEMORY_LIMIT=512 CPU_MAX_OCCUPY=10 MULTI_THREAD_ENABLE=false ./scripts/run_agent
 
 ---
 
-## 8. 평가 대비 한 줄 답변
+## 8. 미션을 진행하면서 개인적으로 궁금했던 것들
 
 Q. 쉘 스크립트를 왜 만들었나?
 
