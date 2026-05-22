@@ -1,0 +1,49 @@
+## time
+Fri May 22 19:16:43 KST 2026
+
+## env
+
+## ps -ef
+wlgjs06+    5521    2371  0 19:16 pts/2    00:00:00 bash ./scripts/monitor.sh agent-app-leak deadlock_avoid 2
+wlgjs06+    5550    5543  1 19:16 pts/1    00:00:00 /mnt/mac/Users/wlgjs060614351/Desktop/Troubleshooting_LinuxProcesses_and_System-Resources/agent-app-leak
+wlgjs06+    5552    5550  2 19:16 pts/1    00:00:00 /mnt/mac/Users/wlgjs060614351/Desktop/Troubleshooting_LinuxProcesses_and_System-Resources/agent-app-leak
+
+## pid family
+ROOT_PID=5550
+PID_FAMILY=5550 5552
+
+## ps
+    PID    PPID USER     STAT %CPU %MEM   RSS    VSZ NLWP     ELAPSED CMD
+   5550    5543 wlgjs06+ S+    1.2  0.0  2192   2904    1       00:06 /mnt/mac/Users/wlgjs060614351/Desktop/Troubleshooting_LinuxProcesses_and_System-Resources/agent-app-leak
+   5552    5550 wlgjs06+ SNl+  2.4  0.4 72980 231396    3       00:06 /mnt/mac/Users/wlgjs060614351/Desktop/Troubleshooting_LinuxProcesses_and_System-Resources/agent-app-leak
+
+## ps -L
+    PID     TID STAT %CPU %MEM     ELAPSED COMMAND
+   5550    5550 S+    1.2  0.0       00:07 agent-app-leak
+   5552    5552 SNl+  1.1  0.4       00:06 agent-app-leak
+   5552    5584 SNl+  1.8  0.4       00:03 agent-app-leak
+   5552    5585 SNl+  0.2  0.4       00:03 agent-app-leak
+
+## top
+top - 19:16:43 up  4:08,  0 user,  load average: 0.00, 0.00, 0.00
+Tasks:   2 total,   0 running,   2 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+MiB Mem :  16049.5 total,  15467.0 free,    691.6 used,    139.7 buff/cache     
+MiB Swap:  17073.5 total,  17073.5 free,      0.0 used.  15357.9 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+   5550 wlgjs06+  20   0    2904   2192   1936 S   0.0   0.0   0:00.09 agent-a+
+   5552 wlgjs06+  30  10  231396  72980  11788 S   0.0   0.4   0:00.17 agent-a+
+
+## top -H
+top - 19:16:43 up  4:08,  0 user,  load average: 0.00, 0.00, 0.00
+Threads:   4 total,   0 running,   4 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+MiB Mem :  16049.5 total,  15465.9 free,    692.7 used,    139.8 buff/cache     
+MiB Swap:  17073.5 total,  17073.5 free,      0.0 used.  15356.8 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+   5550 wlgjs06+  20   0    2904   2192   1936 S   0.0   0.0   0:00.09 agent-a+
+   5552 wlgjs06+  30  10  231396  72980  11788 S   0.0   0.4   0:00.08 agent-a+
+   5584 wlgjs06+  30  10  231396  72980  11788 S   0.0   0.4   0:00.07 agent-a+
+   5585 wlgjs06+  30  10  231396  72980  11788 S   0.0   0.4   0:00.01 agent-a+
