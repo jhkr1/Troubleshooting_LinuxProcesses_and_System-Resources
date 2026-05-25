@@ -1,0 +1,57 @@
+>>> Starting Agent Boot Sequence...
+[1/6] Checking User Account               [OK]
+   ... Running as service user 'wlgjs060614351' (uid=1267600561)
+[2/6] Verifying Environment Variables     [OK]
+   ... All required Envs correct
+[3/6] Checking Required Files             [OK]
+   ... Verified 'secret.key' with correct key string.
+[4/6] Checking Port Availability          [OK]
+   ... Port 15034 is available.
+[5/6] Verifying Log Permission            [OK]
+   ... Log directory is writable: /mnt/mac/Users/wlgjs060614351/Desktop/Troubleshooting_LinuxProcesses_and_System-Resources/evidence/logs
+[6/6] Verifying Mission Environment       [OK]
+   ... MEMORY_LIMIT=512MB, CPU_MAX_OCCUPY=10%, MULTI_THREAD_ENABLE=False
+------------------------------------------------------------
+All Boot Checks Passed!
+Agent READY
+2026-05-25 19:45:58,447 [INFO] [SafetyGuard] Process priority lowered (nice=10).
+2026-05-25 19:45:58,448 [INFO] Agent listening at port 15034
+
+==================================================
+ [ Agent Initiate ] Resource Check 
+==================================================
+ [ MEMORY ] Limit: 512MB 		[ OK ]
+ [ CPU    ] Limit: 10%  		[ OK ]
+ [ THREAD ] Concurrency: False 		[ OK ]
+--------------------------------------------------
+ >>> SYSTEM STATUS: STABLE. STARTING WORKLOAD MONITORING...
+==================================================
+
+2026-05-25 19:46:00,449 [INFO] >>> Scenario Selected: [Healthy System Monitoring]
+
+>>> [SYSTEM] ALL CONFIGURATIONS OPTIMAL. RUNNING STABILITY TEST... <<<
+
+2026-05-25 19:46:00,450 [INFO] [Scheduler] Task Scheduler Initialized.
+2026-05-25 19:46:00,451 [INFO] [Scheduler] Registered Tasks: ['Thread-A', 'Thread-B', 'Thread-C']
+2026-05-25 19:46:00,451 [INFO] [Scheduler] Starting task execution...
+2026-05-25 19:46:00,452 [INFO] [Thread-A] Task Started. Calculating... (20%)
+2026-05-25 19:46:00,504 [INFO] [Thread-A] Calculating... (40%)
+2026-05-25 19:46:00,555 [INFO] [Thread-A] Calculating... (60%)
+2026-05-25 19:46:00,606 [INFO] [Thread-A] Calculating... (80%)
+2026-05-25 19:46:00,658 [INFO] [Thread-A] Task Completed. (100%)
+2026-05-25 19:46:00,710 [INFO] [Thread-B] Task Started. Calculating... (20%)
+2026-05-25 19:46:00,762 [INFO] [Thread-B] Calculating... (40%)
+2026-05-25 19:46:00,814 [INFO] [Thread-B] Calculating... (60%)
+2026-05-25 19:46:00,866 [INFO] [Thread-B] Calculating... (80%)
+2026-05-25 19:46:00,917 [INFO] [Thread-B] Task Completed. (100%)
+2026-05-25 19:46:00,969 [INFO] [Thread-C] Task Started. Calculating... (20%)
+2026-05-25 19:46:01,021 [INFO] [Thread-C] Calculating... (40%)
+2026-05-25 19:46:01,073 [INFO] [Thread-C] Calculating... (60%)
+2026-05-25 19:46:01,124 [INFO] [Thread-C] Calculating... (80%)
+2026-05-25 19:46:01,176 [INFO] [Thread-C] Task Completed. (100%)
+2026-05-25 19:46:01,228 [INFO] [Scheduler] All tasks completed.
+2026-05-25 19:46:01,267 [INFO] [MemoryWorker] Current Heap: 25MB
+2026-05-25 19:46:01,267 [INFO] [CpuWorker] Started. Maximum CPU Limit: 10%
+2026-05-25 19:46:01,267 [INFO] [CpuWorker] Current Load: 5.00%
+2026-05-25 19:46:04,309 [INFO] [MemoryWorker] Current Heap: 50MB
+2026-05-25 19:46:04,373 [INFO] [CpuWorker] Current Load: 9.62%

@@ -1,0 +1,71 @@
+>>> Starting Agent Boot Sequence...
+[1/6] Checking User Account               [OK]
+   ... Running as service user 'wlgjs060614351' (uid=1267600561)
+[2/6] Verifying Environment Variables     [OK]
+   ... All required Envs correct
+[3/6] Checking Required Files             [OK]
+   ... Verified 'secret.key' with correct key string.
+[4/6] Checking Port Availability          [OK]
+   ... Port 15034 is available.
+[5/6] Verifying Log Permission            [OK]
+   ... Log directory is writable: /mnt/mac/Users/wlgjs060614351/Desktop/Troubleshooting_LinuxProcesses_and_System-Resources/evidence/logs
+[6/6] Verifying Mission Environment       [OK]
+   ... MEMORY_LIMIT=512MB, CPU_MAX_OCCUPY=10%, MULTI_THREAD_ENABLE=False
+------------------------------------------------------------
+All Boot Checks Passed!
+Agent READY
+2026-05-25 20:26:12,763 [INFO] [SafetyGuard] Process priority lowered (nice=10).
+2026-05-25 20:26:12,763 [INFO] Agent listening at port 15034
+
+==================================================
+ [ Agent Initiate ] Resource Check 
+==================================================
+ [ MEMORY ] Limit: 512MB 		[ OK ]
+ [ CPU    ] Limit: 10%  		[ OK ]
+ [ THREAD ] Concurrency: False 		[ OK ]
+--------------------------------------------------
+ >>> SYSTEM STATUS: STABLE. STARTING WORKLOAD MONITORING...
+==================================================
+
+2026-05-25 20:26:14,764 [INFO] >>> Scenario Selected: [Healthy System Monitoring]
+
+>>> [SYSTEM] ALL CONFIGURATIONS OPTIMAL. RUNNING STABILITY TEST... <<<
+
+2026-05-25 20:26:14,765 [INFO] [Scheduler] Task Scheduler Initialized.
+2026-05-25 20:26:14,765 [INFO] [Scheduler] Registered Tasks: ['Thread-A', 'Thread-B', 'Thread-C']
+2026-05-25 20:26:14,765 [INFO] [Scheduler] Starting task execution...
+2026-05-25 20:26:14,766 [INFO] [Thread-B] Task Started. Calculating... (20%)
+2026-05-25 20:26:14,817 [INFO] [Thread-B] Calculating... (40%)
+2026-05-25 20:26:14,868 [INFO] [Thread-B] Calculating... (60%)
+2026-05-25 20:26:14,920 [INFO] [Thread-B] Calculating... (80%)
+2026-05-25 20:26:14,972 [INFO] [Thread-B] Task Completed. (100%)
+2026-05-25 20:26:15,023 [INFO] [Thread-C] Task Started. Calculating... (20%)
+2026-05-25 20:26:15,075 [INFO] [Thread-C] Calculating... (40%)
+2026-05-25 20:26:15,127 [INFO] [Thread-C] Calculating... (60%)
+2026-05-25 20:26:15,179 [INFO] [Thread-C] Calculating... (80%)
+2026-05-25 20:26:15,231 [INFO] [Thread-C] Task Completed. (100%)
+2026-05-25 20:26:15,283 [INFO] [Thread-A] Task Started. Calculating... (20%)
+2026-05-25 20:26:15,334 [INFO] [Thread-A] Calculating... (40%)
+2026-05-25 20:26:15,386 [INFO] [Thread-A] Calculating... (60%)
+2026-05-25 20:26:15,437 [INFO] [Thread-A] Calculating... (80%)
+2026-05-25 20:26:15,489 [INFO] [Thread-A] Task Completed. (100%)
+2026-05-25 20:26:15,540 [INFO] [Scheduler] All tasks completed.
+2026-05-25 20:26:15,572 [INFO] [CpuWorker] Started. Maximum CPU Limit: 10%
+2026-05-25 20:26:15,573 [INFO] [MemoryWorker] Current Heap: 25MB
+2026-05-25 20:26:15,573 [INFO] [CpuWorker] Current Load: 5.00%
+2026-05-25 20:26:17,676 [INFO] [CpuWorker] Peak reached (10.00%). Starting cooldown...
+2026-05-25 20:26:18,612 [INFO] [MemoryWorker] Current Heap: 50MB
+2026-05-25 20:26:18,678 [INFO] [CpuWorker] Current Load: 10.00%
+2026-05-25 20:26:21,653 [INFO] [MemoryWorker] Current Heap: 75MB
+2026-05-25 20:26:21,782 [INFO] [CpuWorker] Current Load: 7.15%
+2026-05-25 20:26:23,886 [INFO] [CpuWorker] Cooldown complete (5.00%). Resuming load increase...
+2026-05-25 20:26:24,693 [INFO] [MemoryWorker] Current Heap: 100MB
+2026-05-25 20:26:24,887 [INFO] [CpuWorker] Current Load: 5.00%
+2026-05-25 20:26:27,722 [INFO] [MemoryWorker] Current Heap: 125MB
+2026-05-25 20:26:27,991 [INFO] [CpuWorker] Current Load: 9.11%
+2026-05-25 20:26:30,095 [INFO] [CpuWorker] Peak reached (10.00%). Starting cooldown...
+2026-05-25 20:26:30,763 [INFO] [MemoryWorker] Current Heap: 150MB
+2026-05-25 20:26:31,097 [INFO] [CpuWorker] Current Load: 10.00%
+2026-05-25 20:26:33,201 [INFO] [CpuWorker] Cooldown complete (5.00%). Resuming load increase...
+2026-05-25 20:26:33,802 [INFO] [MemoryWorker] Current Heap: 175MB
+2026-05-25 20:26:34,203 [INFO] [CpuWorker] Current Load: 5.00%
